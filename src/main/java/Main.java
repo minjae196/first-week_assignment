@@ -216,7 +216,7 @@ public class Main {
                     }
                     System.out.println("=".repeat(120));
                 }else if(typeChoice == 2) {
-                    // 드럼용 타입 선택 로직 (1: 어쿠스틱, 2: 일렉트릭 기준)
+
                     String targetType = (typeChoice == 2) ? "일렉트릭" : "어쿠스틱";
 
                     System.out.println("\n" + "=".repeat(120));
@@ -224,18 +224,16 @@ public class Main {
                             "번호", "브랜드", "모델명", "가격", "타입", "색상", "상세사양");
                     System.out.println("-".repeat(120));
 
-                    int i = 1; // 화면에 보여줄 순번 (1부터 시작)
+                    int i = 1;
 
                     for (Instrument inst : inventory) {
-                        // 1. 드럼인지 확인하고 타입이 맞는지 검사
+
                         if (inst instanceof Drum && inst.getType().equals(targetType)) {
-                            // 2. 드럼 전용 데이터를 위해 다운캐스팅
+
                             Drum d = (Drum) inst;
 
-                            // 3. 드럼만의 상세 사양 만들기 (기통 수 + 재질)
                             String detail = d.getPieceCount() + "기통 / " + d.getMaterial();
 
-                            // 4. 표 형식에 맞춰 출력
                             System.out.printf("| %-5d | %-12s | %-25s | %,13d원 | %-10s | %-10s | %-15s |\n",
                                     i, d.getBrand(), d.getName(), d.getPrice(), d.getType(), d.getColor(), detail);
                             i++;
@@ -252,7 +250,7 @@ public class Main {
             }else if(category == 4) {
                 isStoreOpen = false;
             }else{
-                System.out.println("잘못된 입력입니다.");
+                System.out.println("잘못된 입력입니다!");
             }
 
 
