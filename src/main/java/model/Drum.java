@@ -1,3 +1,5 @@
+package model;
+
 public class Drum extends Instrument {
     private int pieceCount;
     private String material;

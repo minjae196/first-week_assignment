@@ -1,4 +1,9 @@
 
+import model.Bass;
+import model.Drum;
+import model.Guitar;
+import model.Instrument;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -241,11 +246,11 @@ public class Main {
                         System.out.println("   [!] 해당 조건에 맞는 악기가 현재 매장에 없습니다.");
                     }
                     System.out.println("=".repeat(120));
-                }else if(category == 4){
-                    isStoreOpen = false;
                 }else{
                     System.out.println("잘못된 입력입니다.");
                 }
+            }else if(category == 4) {
+                isStoreOpen = false;
             }else{
                 System.out.println("잘못된 입력입니다.");
             }

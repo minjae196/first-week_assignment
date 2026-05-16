@@ -1,3 +1,5 @@
+package model;
+
 public class StringInstrument extends Instrument {
     private int numberOfString;
     private String shape;
